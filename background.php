@@ -24,8 +24,28 @@ try {
 // Inclui o objeto do TotalVoice (Classe)
 use TotalVoice\Client as TotalVoiceClient;
 
+// Puxa os dados IMAP
+$stmtImap = $connection->prepare("SELECT * FROM imap LIMIT 1"); 
+$stmtImap->execute(); 
+$row_imap = $stmtImap->fetch();
+
+// Morre o script caso não tenha a config
+if (empty($row_imap)) {
+    die();
+}
+
+// Verifica o servidor IMAP pelo e-mail
+$email = $row_imap['imap_email'];
+$domain_name = substr(strrchr($email, "@"), 1);
+
+if ($domain_name == 'hotmail.com' or $domain_name == 'hotmail.com.br' or $domain_name == 'outlook.com' or $domain_name == 'outlook.com.br') {
+	$server = "outlook.office365.com";
+} else {
+	$server = "imap.gmail.com";
+}
+
 // Inicia conexão com o IMAP E-mail
-$mbox = imap_open("{outlook.office365.com:993/imap/ssl/novalidate-cert}", 'tiketout@outlook.com', 'tiket1424') or die ( imap_last_error());
+$mbox = imap_open("{".$server.":993/imap/ssl/novalidate-cert}", $row_imap['imap_email'], $row_imap['imap_pass']) or die ( imap_last_error());
 
 // While infinito - Para sempre executar uma nova busca ao servidor IMAP
 while(true) {
@@ -178,7 +198,7 @@ while(true) {
                 ':barcode' => $barcode,
                 ':attachment' => $attachment_name,
 		':created' => date('Y-m-d H:i:s'),
-		':due_date' => date("Y-m-d", strtotime($barras->getDtVencimento()))
+		':due_date' => DateTime::createFromFormat('d/m/Y', $barras->getDtVencimento())->format('Y-m-d')
 	    ));
 
             // Após salvar no banco, notificar via SMS

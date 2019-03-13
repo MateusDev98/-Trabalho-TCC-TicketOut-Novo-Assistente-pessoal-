@@ -7,7 +7,7 @@
 
 	require __DIR__. '/boletosPHP.php';
 
-	$tickets = $conn_remote->query("SELECT * FROM ticket_messages");
+	$tickets = $conn_remote->query("SELECT * FROM ticket_messages ORDER BY due_date ASC");
 
 	$data = [];
 

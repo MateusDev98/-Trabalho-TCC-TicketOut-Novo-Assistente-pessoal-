@@ -15,7 +15,8 @@ if(resolved('/')){
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		if($imap_cadas()){
-
+			
+			flash('Ativado','success');
 			header('location: /view_tickets');
 
 		}

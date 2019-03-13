@@ -17,10 +17,7 @@ $imap_cadas = function() use ($conn){
 		die();
 	}
 
-	//Transformando a senha em hash, o hash é um valor que vai transformar a senha em uma valor que humanos não podem ler, podemos comparar os valores mas nunca saber qual é a senha do usuário, é um dos métodos de autenticação mais seguros ultimamente, não podendo voltar para a senha original depois de cadastrado no banco
-	$pass = password_hash($pass, PASSWORD_DEFAULT);
-
-	$stmt = $conn->prepare($sql);
+		$stmt = $conn->prepare($sql);
 	$stmt->bind_param('sss', $email, $pass, $phone);
 
 	$stmt->execute();

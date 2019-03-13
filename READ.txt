@@ -1,0 +1,5 @@
+Documento root, um documento root é: A raiz do documento é um diretório (uma pasta) que é armazenado nos servidores do host e que é designado para armazenar páginas da web. Quando alguém olha para o seu site, este é o local que eles estarão acessando.
+
+Para que um site seja acessível aos visitantes, ele deve ser publicado no diretório correto, a "raiz do documento".
+
+Você pode pensar que haveria apenas um diretório em seu espaço nos servidores do host, mas muitas vezes os hosts fornecem serviços além de apenas publicar um site. Nesse caso, é provável que eles configurem todas as contas com vários diretórios, já que cada serviço exigiria o seu próprio. 

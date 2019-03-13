@@ -1,0 +1,15 @@
+{
+    "name": "challengedevs/ticketout",
+    "description": "Notify pay",
+    "authors": [
+        {
+            "name": "Mateus Dev",
+            "email": "mateus.ti981219@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/pdf-to-text": "^1.1",
+        "sendpulse/rest-api": "^1.0",
+        "total-voice/php-client": "1.*"
+    }
+}

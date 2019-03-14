@@ -52,8 +52,11 @@ if(resolved('/')){
 }elseif(resolved('/view_tickets')){
 	// require __DIR__ . '/../source/tickets.php';
 	
-	render('/site/view_tickets','site');
-
+	if (isset($_GET['id'])) {
+		render('/site/view_ticket', 'site');
+	} else {
+		render('/site/view_tickets','site');
+	}
 }elseif(resolved('/get_tickets')){
 	require __DIR__ . '/../source/get_tickets.php';
 	

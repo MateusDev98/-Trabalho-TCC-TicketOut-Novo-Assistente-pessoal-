@@ -21,7 +21,7 @@ $imap_cadas = function() use ($conn){
 	$stmt->bind_param('sss', $email, $pass, $phone);
 
 	$stmt->execute();
-
+	
 	flash('ATIVADO','success');
 
 	return;

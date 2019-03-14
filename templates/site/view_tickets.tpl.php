@@ -13,7 +13,7 @@
 <section>
 <div class="container">
 	<div class="row">
-		<div class="panel" style="margin-top: 5%;">
+		<div class="panel" style="margin-top: 10%;">
 			<div class="panel-heading text-center">
 					<h1><b>Meus boletos <i class="fas fa-money-check-alt"></i></b></h1>
 			</div>
@@ -39,7 +39,7 @@
 						<td><?php echo $barras->getDtVencimento();?></td>
 						<td><?php echo $result['barcode'];?></td>
 						<td>R$ <?php echo $barras->getValorDocumento();?> </td>
-						<td><a href="/" class="btn btn-primary" style="width: 75px;" target="blank"><i class="fas fa-external-link-alt"></i></a></td>
+						<td><a href="view_tickets?id=<?php echo $result['id'];?>" class="btn btn-primary" style="width: 75px;" target="blank"><i class="fas fa-external-link-alt"></i></a></td>
 					</tr>
 					<?php endwhile; ?>
 				</tbody>

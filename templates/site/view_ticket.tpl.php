@@ -24,6 +24,20 @@ $dued = $barras->getDtVencimento();
 $amount = $barras->getValorDocumento();
 $link_ticket = "attachments/" . $ticket['attachment'];
 ?>
-<br><br><br><br><br><br><br>
- <a href="/<?php echo $link_ticket; ?>" target="_blank">Abrir Boleto </a>
+<section>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="panel" style="margin-top:10%">
+					<div class="panel-body text-center">
+						<h1> Fazer o dowload do boleto </h1>
+						<p>  Este boleto está com a data e vencimento para: <?php echo $dued; ?><br> 
+							Com o valor de: <?php echo $amount." R$";?> </p>
+						<a href="/<?php echo $link_ticket; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-file-download"></i> Download </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</section>
 

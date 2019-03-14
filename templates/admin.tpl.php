@@ -17,7 +17,7 @@
   		<header>
  			<nav class="navbar navbar-dark bg-dark">
           <span> <!-- Encapisular tudo dentro do nav -->
-      				<a class="navbar-brand font-weight-bold" href="/admin/">AdminDev</a>
+      				<a class="navbar-brand font-weight-bold" href="/admin/home">AdminDev</a>
       				<span class="navbar-text">Painel Administrativo <i class="fas fa-tools"></i></span>		
           </span>
           <a href="/admin/auth/logout" class="btn btn-danger">Sair <i class="fas fa-sign-out-alt"></i></a>
@@ -33,14 +33,11 @@
                 <li class="nav-item">
                 <a href="/admin/home" class="nav-link <?php if(resolved('/admin/home')):?> active <?php endif; ?>"><i class="fas fa-home"></i> Inicio </a>
               </li>
-							<li class="nav-item">
-								<a href="/admin/pages/" class="nav-link <?php if(resolved('/admin/pages.*')):?> active <?php endif; ?>"><i class="far fa-file"></i> Páginas </a>
-							</li>
-					   <li class="nav-item">
-                <a href="/admin/users" class="nav-link <?php if(resolved('/admin/users.*')):?> active <?php endif; ?>"><i class="fas fa-users"></i> Usuários </a>
+	 <li class="nav-item">
+                <a href="/admin/users/home" class="nav-link <?php if(resolved('/admin/users.*')):?> active <?php endif; ?>"><i class="fas fa-users"></i> Usuários </a>
               </li>		
               <li class="nav-item">
-								<a href="/admin/administradores/" class="nav-link <?php if(resolved('/admin/administradores.*')):?> active <?php endif; ?>"><i class="fas fa-user-shield"></i> Admin </a>
+								<a href="/admin/administradores/home" class="nav-link <?php if(resolved('/admin/administradores.*')):?> active <?php endif; ?>"><i class="fas fa-user-shield"></i> Admin </a>
 							</li>
 						</ul>
 					</div>

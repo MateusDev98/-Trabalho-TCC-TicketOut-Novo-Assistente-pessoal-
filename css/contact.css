@@ -51,6 +51,13 @@
           .contact{
             margin-left: 20px;
           }
+          .menu_ul{
+            float: left;
+            font-size: 12px;
+          }
+          .menu_li{
+            font-size: 9px;
+          }
         }   
         .fab{
         height: 20px;

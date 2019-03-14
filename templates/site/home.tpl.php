@@ -3,14 +3,14 @@
 	<div class="row">
 		<div class="col-lg-offset-0  col-lg-9"> 
 		<div class="jumbotron" style="margin-top:15%;">
-			<div class="container-fluid">
+			<div class="container-fluid tainer">
 				<h2 style="float: left; font-weight: bold; font-size: 45px;">Beneficios </h2><br>
 				<br><br><br>
 				<p>Com TicketOut a data de vencimento, nunca mais será um problema.</p>
 				<p>Notificações diarias, para que você não perca a data de vencimento do seu boleto.</p>
 				<p>Você pode ativar a ferramenta clicando logo ao lado! <i class="fas fa-angle-double-right"></i>
 				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
-					<img src="/img/3.png" class="imgresponsive img">
+					<img src="/img/3.png" class="imgresponsive">
 				</button></p>  
 			<div class="modal fade" id="myModal">
 				<div class="modal-dialog">
@@ -44,5 +44,3 @@
 	</div>
 </div>
 </section>
-<br><br>
-<br><br>

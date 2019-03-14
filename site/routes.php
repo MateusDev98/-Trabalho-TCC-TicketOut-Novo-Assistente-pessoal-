@@ -16,12 +16,14 @@ if(resolved('/')){
 
 		if($imap_cadas()){
 			
+
 			flash('Ativado','success');
-			header('location: /view_tickets');
-
+			echo '<script> window.location.href = "/view_tickets";</script>';
+			die();
 		}
+		
 
-	}
+}
 //Verficamos se foi solicitado a pagina contact e exibimos
 }elseif(resolved('/into_contact')){
 
@@ -43,7 +45,7 @@ if(resolved('/')){
 		}else{
 			flash('Falha ao enviar','error');
 		}
-		return header("location: /site/auth/contact");
+		return header("location: /into_contact");
 
 	}
 

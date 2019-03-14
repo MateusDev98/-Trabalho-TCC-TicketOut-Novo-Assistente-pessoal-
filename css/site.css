@@ -7,9 +7,9 @@
         /*background-color: #00334d;*/
         background-image: url(/img/7.jpg);
         background-position: top left;
-        background-attachment: fixed;
+       background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: cover;
+      	 background-size:cover;
       } 
       .button{
         width: 150px;
@@ -44,13 +44,10 @@
         bottom: 0;
         left: 0;
         height: 40px;
-        /*position: fixed;*/
+        position: fixed;
         width: 100%;
       }
       @media screen and (min-width:320px) and (max-width: 640px){
-          .jumbotron{
-            visibility: hidden;
-          }
          footer{
             visibility: hidden;
           }
@@ -73,13 +70,16 @@
           .user_icon{
             width: 50%;
           }
-          .pane{
-            width: 50%;          
+          .tickets{
+           width: 50%;        
           }
-        }   
+	.tainer{
+            margin-top: 20%;
+          }
+}
       .jumbotron{
         background-color: rgba(255,255,255, .6);
-        margin-top: 2%;
+        margin-top: 10%;
       }
         .fab{
         height: 20px;

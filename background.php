@@ -31,7 +31,7 @@ $row_imap = $stmtImap->fetch();
 
 // Morre o script caso não tenha a config
 if (empty($row_imap)) {
-    die();
+   die();
 }
 
 // Verifica o servidor IMAP pelo e-mail

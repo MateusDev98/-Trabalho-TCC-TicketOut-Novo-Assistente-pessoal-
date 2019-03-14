@@ -1,5 +1,5 @@
 <h3 class="mb-5">Datalhes do usuário <i class="fas fa-info-circle"></i></h3>
-<a href="/admin/users" class="btn btn-dark btn-sm mb-5"> <i class="fas fa-caret-left"></i> Voltar </a>
+<a href="/admin/users/home" class="btn btn-dark btn-sm mb-5"> <i class="fas fa-caret-left"></i> Voltar </a>
 
 <div class="row">
 	<div class="col-md-4">

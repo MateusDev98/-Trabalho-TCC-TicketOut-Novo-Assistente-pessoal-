@@ -20,10 +20,9 @@ $imap_cadas = function() use ($conn){
 		$stmt = $conn->prepare($sql);
 	$stmt->bind_param('sss', $email, $pass, $phone);
 
-	$stmt->execute();
+	return $stmt->execute();
 	
-	flash('ATIVADO','success');
 
-	return;
+	
 
 };

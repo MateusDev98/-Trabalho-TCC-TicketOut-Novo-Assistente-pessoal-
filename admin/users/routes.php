@@ -2,14 +2,14 @@
 
 require __DIR__.'/db.php';
 
-if(resolved('/admin/users')){
+if(resolved('/admin/users/home')){
 	$users = $users_all();
 	render('/admin/users/index', 'admin', compact('users')); //por ultimo seria os dados de listagem, o campact gera um array com a chave chamada neste caso é a users e um valor de uma variavel chamda users tbm
 
 }else if(resolved('/admin/users/create')){
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		$users_create();
-		return header('location: /admin/users');
+		return header('location: /admin/users/home');
 	}
 	render('/admin/users/create','admin');
 
@@ -27,5 +27,5 @@ if(resolved('/admin/users')){
 
 }else if ($params = resolved('/admin/users/(\d+)/delete')) {
 	$users_remove($params[1]);//O primeiro retorna o que foi digitado
-	return header('location:/admin/users');
+	return header('location:/admin/users/home');
 }

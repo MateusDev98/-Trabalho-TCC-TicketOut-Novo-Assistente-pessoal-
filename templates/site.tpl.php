@@ -51,7 +51,7 @@
 	<footer class='col-sm-18'>
 		<label class="footer_content">Copyright
 		<span class="glyphicon glyphicon-copyright-mark" aria-hidden="true" style="color: #fff; font-size: 10px"></span>
-<?php echo date('Y');?> Challenge YOU. Todos os direitos reservados</label>
+<?php echo date('Y');?> TicketOut. Todos os direitos reservados</label>
 	</footer>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><!--linkando com o JS externo-->
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><!--linkando com o JS externo-->

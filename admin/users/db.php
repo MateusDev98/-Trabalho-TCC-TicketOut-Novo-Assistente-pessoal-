@@ -66,7 +66,7 @@ $users_create = function() use ($conn){
 //Atualização/edição  de registro
 $users_edit = function($id) use ($conn){
 
-	$data = users_get_data('/admin/users/'. $id .'/edit');
+	$data = users_get_data('/admin/users/home'. $id .'/edit');
 
 	$sql = 'UPDATE users SET email = ?, name = ?, created = NOW(), updated = NOW() WHERE id = ?'; 
 

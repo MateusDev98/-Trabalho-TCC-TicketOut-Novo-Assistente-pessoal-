@@ -3,11 +3,9 @@
 <p class="mt-5">O que deseja fazer?</p>
 
 <p>
-	<a href="/admin/pages" class="btn btn-primary btn-lg" title="Páginas"><i class="far fa-file" ></i>
-	Gerenciar páginas</a>
-	<a href="/admin/users" class="btn btn-primary btn-lg" title="Usuários"><i class="fas fa-users-cog" ></i>
+	<a href="/admin/users/home" class="btn btn-primary btn-lg" title="Usuários"><i class="fas fa-users-cog" ></i>
 	Gerenciar usuários</a>	
-	<a href="/admin/administradores" class="btn btn-primary btn-lg" title="Usuários"><i class="fas fa-user-shield"></i>
+	<a href="/admin/administradores/home" class="btn btn-primary btn-lg" title="Usuários"><i class="fas fa-user-shield"></i>
 	Gerenciar administradores</a>
 </p>
 

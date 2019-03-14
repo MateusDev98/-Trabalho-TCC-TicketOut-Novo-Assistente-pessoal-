@@ -3,8 +3,8 @@
 	<div class="container">
 		<div class="col-lg-5">
 			<img src="/img/logo2.png" style="outline: none; margin-top:20%;" class="img-responsive img">
-			<h3 style="margin-top: 10%; font-family: Georgia; color: white; font-size: 30px">Nunca mais atrase seus boletos com TickOut!</h3>
-			<h3 style="font-family: Georgia; color: white; font-size: 30px">TickOut você no controle das suas contas!</h3>
+			<h3 style="margin-top: 10%; font-family: Georgia; color: white; font-size: 30px" class="img">Nunca mais atrase seus boletos com TickOut!</h3>
+			<h3 style="font-family: Georgia; color: white; font-size: 30px" class="img">TickOut você no controle das suas contas!</h3>
 		</div>
 
 	<div class="row"> 
@@ -30,14 +30,10 @@
 					</div>
 					<button type="submit" class="btn btn-primary button center-block">Cadastrar <span class="glyphicon glyphicon-ok"><!-- Criação do botão de cadastro --></span>
 					</button><br><center> 
-					<label style="color:#000;">Você já possui uma conta?</label> <a href="/site/auth/login">Entrar.</a><!-- Link para direcionar o usuario ao formulario de login-->
-			</form>	<!-- Fim de formulario de cadastro-->
 					<a class="center-block" data-toggle="modal" data-target="#mymodal" style="cursor: pointer;">Termos e condições.
 					</a> <!-- Link´para abrir o modal que apresenta os termos e condições do sistema-->
 					<h4 style="color: #000"> Fale conosco.</h4>
-					<a class="fab fa-facebook-f"></a>
-					<a class="fab fa-twitter"></a>
-					<a class="fab fa-google-plus-g"></a>
+					<p> tiketout@outlook.com </p>
 			</center>
 		</div>
 	</div>

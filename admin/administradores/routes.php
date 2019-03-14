@@ -2,14 +2,14 @@
 
 require __DIR__.'/db.php';
 
-if(resolved('/admin/administradores')){
+if(resolved('/admin/administradores/home')){
 	$admins = $admin_all();
 	render('/admin/administradores/index', 'admin', compact('admins')); //por ultimo seria os dados de listagem, o campact gera um array com a chave chamada neste caso é a users e um valor de uma variavel chamda users tbm
 
 }else if(resolved('/admin/administradores/create')){
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		$admin_create();
-		return header('location: /admin/administradores');
+		return header('location: /admin/administradores/home');
 	}
 	render('/admin/administradores/create','admin');
 
@@ -20,12 +20,12 @@ if(resolved('/admin/administradores')){
 }elseif ($params = resolved('/admin/administradores/(\d+)/edit')) {
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 		$admin_edit($params[1]);
-		return header('location: /admin/administradores/' . $params[1]);	
+		return header('location: /admin/administradores/home' . $params[1]);	
 	}
 	$admin = $admin_view($params[1]);
 	render('/admin/administradores/edit','admin',compact('admin'));
 
 }elseif ($params = resolved('/admin/administradores/(\d+)/delete')) {
 	$admin_remove($params[1]);//O primeiro retorna o que foi digitado
-	return header('location:/admin/administradores');
+	return header('location:/admin/administradores/home');
 }

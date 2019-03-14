@@ -10,6 +10,9 @@
 			<dt class="col-sm-3"><strong> Email: </strong></dt>
 			<dd class="col-sm-9"><?php echo $data['user']['email'];?></dd>
 
+			<dt class="col-sm-3"><strong> Telefone: </strong></dt>
+                        <dd class="col-sm-9"><?php echo $data['user']['phone'];?></dd>
+
 			<dt class="col-sm-3"><strong> Criado: </strong></dt>
 			<dd class="col-sm-9"><?php echo $data['user']['created'];?>.</dd>
 

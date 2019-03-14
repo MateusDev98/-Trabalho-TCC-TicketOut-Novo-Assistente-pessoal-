@@ -6,13 +6,14 @@ function users_get_data($redirectOnError){
 	$email = filter_input(INPUT_POST, 'email');
 	$pass = filter_input(INPUT_POST, 'pass');
 	$name = filter_input(INPUT_POST, 'name');
+	$phone = filter_input(INPUT_POST, 'phone');
 
 	if(!$name or !$email){
 		flash('Campos em branco!','error');
 		header('location: ' . $redirectOnError);
 		die();
 	}
-	return compact('name','email','pass');
+	return compact('name','email','pass','phone');
 }
 
 //Criamos a função anonima para todos os usuários, a listagem de dados
@@ -42,7 +43,7 @@ $users_create = function() use ($conn){
 
 	$data = users_get_data('/admin/users/create');
 
-	$sql = 'INSERT INTO users(email,pass,name,created,updated) VALUES(?,?,?, NOW(), NOW())';
+	$sql = 'INSERT INTO users(email,pass,name,phone,created,updated) VALUES(?,?,?,?, NOW(), NOW())';
 
 	if(is_null($data['pass'])){
 		flash('Preencha o campo da senha','error');
@@ -54,7 +55,7 @@ $users_create = function() use ($conn){
 	$data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
 
 	$stmt = $conn->prepare($sql);
-	$stmt->bind_param('sss', $data['email'], $data['pass'], $data['name']);
+	$stmt->bind_param('ssss', $data['email'], $data['pass'], $data['name'], $data['phone']);
 
 	flash('Usuário adicionado!','success');
 
@@ -68,19 +69,19 @@ $users_edit = function($id) use ($conn){
 
 	$data = users_get_data('/admin/users/home'. $id .'/edit');
 
-	$sql = 'UPDATE users SET email = ?, name = ?, created = NOW(), updated = NOW() WHERE id = ?'; 
+	$sql = 'UPDATE users SET email = ?, name = ?, phone = ?, created = NOW(), updated = NOW() WHERE id = ?'; 
 
 	if($data['pass']){
 		$data['pass'] =  password_hash($data['pass'], PASSWORD_DEFAULT);
-		$sql = 'UPDATE users SET email = ?, pass = ?, name = ?, created = NOW(), updated = NOW() WHERE id = ?'; 
+		$sql = 'UPDATE users SET email = ?, pass = ?, name = ?, phone = ?, created = NOW(), updated = NOW() WHERE id = ?'; 
 	}
 
 	$stmt = $conn->prepare($sql);
 
 	if($data['pass']){
-		$stmt->bind_param('sssi', $data['email'], $data['pass'], $data['name'], $id);
+		$stmt->bind_param('ssssi', $data['email'], $data['pass'], $data['name'], $data['phone'], $id);
 	}else{
-		$stmt->bind_param('ssi', $data['email'], $data['name'], $id);
+		$stmt->bind_param('sssi', $data['email'], $data['name'], $data['phone'], $id);
 	}
 
 	flash('Usuário atualizado!','info');

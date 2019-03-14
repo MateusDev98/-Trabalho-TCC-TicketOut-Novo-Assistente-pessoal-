@@ -13,11 +13,11 @@
 <section>
 <div class="container">
 	<div class="row">
-		<div class="panel" style="margin-top: 10%; padding: 10px;">
+		<div class="panel panel-default" style="margin-top: 10%; padding: 10px;">
 			<div class="panel-heading text-center">
 					<h1><b>Meus boletos <i class="fas fa-money-check-alt"></i></b></h1>
 			</div>
-			<table class="table table-responsive">
+			<table class="table">
 				<thead>
 					<tr>
 						<th><i class="glyphicon glyphicon-sort-by-attributes-alt"></i> Nome</th>

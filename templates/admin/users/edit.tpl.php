@@ -9,6 +9,10 @@
 		<label for="users_email"><strong> Email -</strong></label>
 		<input type="email" name="email" class="form-control col-sm-5" id="users_email" value="<?php echo $data['user']['email'];?>">
 	</div>	
+       <div class="form-group">
+                <label for="users_phone"><strong> Telefon -</strong></label>
+                <input type="text" name="phone" class="form-control col-sm-5" id="users_phone" value="<?php echo $data['user']['phone'];?>">
+        </div>  
 	<div class="form-group">
 		<label for="users_pass"><strong> Senha -</strong></label>
 		<input type="password" name="pass" class="form-control col-sm-5" id="users_pass">
